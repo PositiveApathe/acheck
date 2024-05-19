@@ -1,0 +1,25 @@
+Clear-Host
+
+
+Write-Host "";
+Write-Host "";
+Write-Host -ForegroundColor Red ".____    .__           ____   ____    _____          __  .__  _________ .__                   __    ";
+Write-Host -ForegroundColor Red "|    |   |__|__  __ ___\   \ /   /   /  _  \   _____/  |_|__| \_   ___ \|  |__   ____ _____ _/  |_  ";
+Write-Host -ForegroundColor Red "|    |   |  \  \/ // __ \   Y   /   /  /_\  \ /    \   __\  | /    \  \/|  |  \_/ __ \\__  \\   __\ ";
+Write-Host -ForegroundColor Red "|    |___|  |\   /\  ___/\     /   /    |    \   |  \  | |  | \     \___|   Y  \  ___/ / __ \|  |  ";
+Write-Host -ForegroundColor Red "|_______ \__| \_/  \___  >\___/    \____|__  /___|  /__| |__|  \______  /___|  /\___  >____  /__|     ";
+Write-Host -ForegroundColor Red "        \/             \/                  \/     \/                  \/     \/     \/     \/      ";
+Write-Host "";
+Write-Host -ForegroundColor Blue "   Made By MinikAyicuhV5 / Kennedy For You - " -NoNewLine
+Write-Host -ForegroundColor Red "discord.gg/acmaster";
+Write-Host "";
+
+
+# Get threat detection information and select desired fields
+$threats = Get-MpThreatDetection | Select-Object InitialDetectionTime, LastThreatStatusChangeTime, ProcessName, Resources
+
+# Display the information in a grid view
+$threats | Out-GridView -PassThru -Title 'Windows Security 000x16x3b'
+
+
+
