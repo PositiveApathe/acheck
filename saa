@@ -1,0 +1,19 @@
+Clear-Host
+Write-Host @"
+.____    .__           ____   ____    _____          __  .__  _________ .__                   __   
+|    |   |__|__  __ ___\   \ /   /   /  _  \   _____/  |_|__| \_   ___ \|  |__   ____ _____ _/  |_ 
+|    |   |  \  \/ // __ \   Y   /   /  /_\  \ /    \   __\  | /    \  \/|  |  \_/ __ \\__  \\   __\
+|    |___|  |\   /\  ___/\     /   /    |    \   |  \  | |  | \     \___|   Y  \  ___/ / __ \|  |  
+|_______ \__| \_/  \___  >\___/    \____|__  /___|  /__| |__|  \______  /___|  /\___  >____  /__|  
+        \/             \/                  \/     \/                  \/     \/     \/     \/      
+"@ -ForegroundColor Cyan
+
+Write-Host "Made by MinikAyicuhV5 / Kennedy for Your Sweetie`n"
+
+
+$AppSwitchedPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\FeatureUsage\AppSwitched"
+
+Get-ItemProperty -Path $AppSwitchedPath |
+    findstr /i /C:":\" |
+    Sort-Object LastWriteTime |
+    Out-GridView -PassThru -Title 'Appswitch Script by Gothic Girl lover'
