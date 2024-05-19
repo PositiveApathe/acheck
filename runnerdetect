@@ -12,7 +12,6 @@ Write-Host @"
                                             
 "@ -ForegroundColor Magenta
 
-Write-Host "Made By MinikAyicuhV5 / Kennedy For MDRP"
 
 $system32Path = "$env:SystemRoot\System32"
 $desktopPath = [Environment]::GetFolderPath("Desktop")
